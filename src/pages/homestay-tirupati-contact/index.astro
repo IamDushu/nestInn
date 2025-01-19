@@ -1,0 +1,112 @@
+---
+import FooterSection from '../../components/FooterSection.astro';
+import TalkComponent from '../../components/TalkComponent.astro';
+import Layout from '../../layouts/Layout.astro';
+
+const imageNumbers = [1, 3, 4, 5, 2, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 18, 17, 19, 21, 20, 22];
+---
+
+<Layout title="Nest Inn Homestay | Homestay in tirupati">
+	<section class="min-h-[60vh] lg:min-h-[90vh] bg-contactBanner bg-cover bg-no-repeat bg-center">
+        <nav class="flex justify-between items-center px-10 py-10 lg:px-24 lg:h-[20vh]">
+            <a href="/">
+                <img src="/fourSeasonsHomestay.png" alt="Nest Inn Homestay in tirupati" class="w-32 lg:w-64 lg:h-24">
+            </a>
+            <ul class="hidden lg:flex space-x-4 ">
+                <a href="/">
+                    <li class="cursor-pointer hover:text-green-600">HOME</li>
+                </a>
+                <a href="/homestay-tirupati">
+                    <li class="cursor-pointer hover:text-green-600">ABOUT</li>
+                </a>
+                <a href="/homestay-tirupati-contact">
+                    <li class="cursor-pointer text-green-600">CONTACT</li>
+                </a>
+            </ul>
+            <div class="lg:hidden flex items-center">
+                <button id="hamburger-icon" class="text-green-600 focus:outline-none">
+                    <!-- Hamburger Icon -->
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="lg:hidden fixed top-0 left-0 w-full h-full backdrop-blur shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out">
+                <div class="flex justify-end p-4">
+                    <button id="close-menu" class="text-green-600 focus:outline-none">
+                        <!-- Close Icon -->
+                        <svg class="w-8 h-8 mr-5 mt-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="flex flex-col items-center text-xl justify-center h-full space-y-4">
+                    <li class="bg-green-800 min-w-[200px] text-center"><a href="/" class="block w-[100%] py-5 h-[100%] text-white font-bold">HOME</a></li>
+                    <li class="bg-green-800 min-w-[200px] text-center"><a href="/homestay-tirupati" class="block w-[100%] py-5 h-[100%] hover:text-green-600 text-white font-bold">ABOUT</a></li>
+                    <li class="bg-green-800 min-w-[200px] text-center"><a href="/homestay-tirupati-contact" class="block w-[100%] py-5 h-[100%] hover:text-green-600 text-orange-400 font-bold">CONTACT</a></li>
+                </ul>
+            </div>			
+        </nav>
+		<div class=" lg:h-[70vh] flex justify-center pt-10">
+			<div class="text-center space-y-6">
+				<div>
+					<h1 class=" text-4xl lg:text-6xl text-green-800 font-medium">CONTACT US</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+    <section class="px-10 py-16 lg:px-44 lg:py-28 h-[100vh] space-y-16">
+        <h1 class="text-4xl text-center lg:text-start">Talk To Us</h1>
+        <section class="space-y-10">
+            <div>
+                <div class="flex flex-col items-center text-center lg:text-start lg:flex-row gap-5 ">
+                    <div class="border border-green-500 rounded-full h-[40px] w-[40px] text-center flex items-center justify-center">
+                        <img src="/icons/email.png" alt="email homestay tirupati" class="w-[20px] h-[20px]  ">
+                    </div>
+                    <div class="space-y-1">
+                        <p class="text-gray-500">EMAIL</p>
+                        <p class="text-green-800 text-xl">contact@nestinnhomestay.com</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="flex gap-5 flex-col items-center text-center lg:text-start lg:flex-row">
+                    <div class="border border-green-500 rounded-full h-[40px] w-[40px] text-center flex items-center justify-center">
+                        <img src="/icons/call.png" alt="email homestay tirupati" class="w-[20px] h-[20px]  ">
+                    </div>
+                    <div class="space-y-1">
+                        <p class="text-gray-500">PHONE NUMBER</p>
+                        <p class="text-green-800 text-2xl">+91 9000374374</p>
+                        <p class="text-green-800 text-2xl">+91 91600 57731</p>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+            </div>
+            <div>
+                <div class="flex gap-5 flex-col items-center text-center lg:text-start lg:flex-row">
+                    <div class="border border-green-500 rounded-[100%] h-[40px] w-[40px] lg:w-[60px] text-center flex items-center justify-center">
+                        <img src="/icons/pin.png" alt="email homestay tirupati" class="w-[20px] h-[20px]  ">
+                    </div>
+                    <div class="space-y-1">
+                        <p class="text-gray-500">ADDRESS</p>
+                        <p class="text-green-800 text-xl lg:text-2xl">
+                            1-25/11, car showroom road, opposite to Tata motors, beside Mango Market Road, Kr Nagar, Srinivasapuram, Tirupati, Andhra Pradesh 517503</p>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class=" px-5 lg:px-24 py-10">
+        <iframe title="Nest Inn Home Stay" class="w-full h-[50vh]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3095.161215659831!2d79.43222237387928!3d13.60977220056843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4d4b00046544ad%3A0x96050a3b418a16f2!2sNest%20Inn%20Home%20Stay!5e1!3m2!1sen!2sin!4v1737268292093!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+	<FooterSection />
+</Layout>
+
+<style>
+
+</style>

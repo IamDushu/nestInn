@@ -1,0 +1,77 @@
+---
+import AboutUs from '../components/AboutUs.astro';
+import FooterSection from '../components/FooterSection.astro';
+import PropertyOption from '../components/PropertyOption.astro';
+import TalkComponent from '../components/TalkComponent.astro';
+import Layout from '../layouts/Layout.astro';
+
+const elegant = "Experience a luxurious getaway at our Nest Inn Stay in Tirupati, thoughtfully designed for comfort and elegance. This charming residence features a spacious living area with plush sofas, a stylish dining space, and a fully-equipped modular kitchen with modern appliances. The cozy bedroom boasts an en-suite bathroom and premium AC for ultimate relaxation. A shared balcony offers serene views. The apartment is adorned with sophisticated LED lighting and tasteful furnishings. Ample parking is provided for your convenience."
+const elite = "Discover unparalleled comfort in our Nest Inn Homestay in Tirupati, perfect for families or professionals seeking a premium stay. This elegant apartment offers a spacious lounge with designer seating, a sleek dining area, and a modern kitchen fully equipped for your culinary needs. Each of the two bedrooms includes an en-suite bathroom and climate-controlled AC for restful nights. A shared balcony provides a refreshing outdoor space. Fully furnished with contemporary décor, this retreat also offers ample parking for a seamless experience."
+const lavish = "Indulge in sophistication at our Nest Inn Homestay in Tirupati, designed for those who value luxury and space. This exquisite home features an expansive living area with luxurious seating, a refined dining area, and a gourmet kitchen equipped with top-of-the-line amenities. Each of the three bedrooms boasts an en-suite bathroom, lavish furnishings, and AC for maximum comfort. Step out onto the shared balcony for tranquil moments. With elegant LED lighting and premium interiors throughout, this residence includes convenient parking facilities."
+---
+
+
+<Layout title="Nest Inn Homestay | Homestay in tirupati">
+		<section class="min-h-[100vh] bg-banner bg-cover bg-no-repeat">
+			<nav class="flex justify-between items-center px-10 py-10 lg:px-24 lg:h-[20vh]">
+				<a href="/">
+					<img src="/fourSeasonsHomestay.png" alt="Nest Inn Homestay in tirupati" class="w-32 lg:w-64 lg:h-24">
+				</a>
+				<ul class="hidden lg:flex space-x-4 ">
+					<a href="/">
+						<li class="cursor-pointer text-green-600">HOME</li>
+					</a>
+					<a href="/homestay-tirupati">
+						<li class="cursor-pointer hover:text-green-600">ABOUT</li>
+					</a>
+					<a href="/homestay-tirupati-contact">
+						<li class="cursor-pointer hover:text-green-600">CONTACT</li>
+					</a>
+				</ul>
+				<div class="lg:hidden flex items-center">
+					<button id="hamburger-icon" class="text-green-600 focus:outline-none">
+						<!-- Hamburger Icon -->
+						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+						</svg>
+					</button>
+				</div>
+				<div id="mobile-menu" class="lg:hidden fixed top-0 left-0 w-full h-full backdrop-blur shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out">
+					<div class="flex justify-end p-4">
+						<button id="close-menu" class="text-green-600 focus:outline-none">
+							<!-- Close Icon -->
+							<svg class="w-8 h-8 mr-5 mt-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+							</svg>
+						</button>
+					</div>
+					<ul class="flex flex-col items-center text-xl justify-center h-full space-y-4">
+						<li class="bg-green-800 min-w-[200px]  text-center"><a href="/" class="text-orange-400 block w-[100%] py-5 h-[100%] font-bold">HOME</a></li>
+						<li class="bg-green-800 min-w-[200px]  text-center"><a href="/homestay-tirupati" class="hover:text-green-600 block w-[100%] py-5 h-[100%] text-white font-bold">ABOUT</a></li>
+						<li class="bg-green-800 min-w-[200px]  text-center"><a href="/homestay-tirupati-contact" class="hover:text-green-600 block w-[100%] py-5 h-[100%] text-white font-bold">CONTACT</a></li>
+					</ul>
+				</div>			
+			</nav>
+			<div class=" lg:h-[80vh] flex justify-center pt-10">
+				<div class="text-center space-y-16">
+					<div>
+						<h1 class=" text-4xl lg:text-6xl text-green-800 font-medium">Nest Inn Homestay</h1>
+						<p class="text-2xl lg:text-3xl font-thin italic my-2">Embrace every season of comfort.</p>
+					</div>
+					<div class="bg-[#74a94b] text-white w-fit mx-auto  cursor-pointer hover:bg-green-900">
+						<a class="h-full w-full py-2 px-12 block" href="/homestay-tirupati">EXPLORE</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="grid grid-cols-1 lg:grid-cols-3 gap-16 px-10 py-10 lg:px-24 lg:py-20">
+			<PropertyOption title='ELEGANT' body={elegant} img='/1bhk.jpeg'  />
+			<PropertyOption  title='LAVISH'body={lavish}  img='/2bhk.jpeg' />
+			<PropertyOption title='ELITE' body={elite} img='/3bhk.jpeg' />
+		</section>
+		<AboutUs />
+		<TalkComponent />
+		<FooterSection />
+</Layout>
+
+

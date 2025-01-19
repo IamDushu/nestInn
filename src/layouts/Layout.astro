@@ -1,0 +1,75 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeMenu = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    const toggleMenu = () => {
+        if (mobileMenu.classList.contains('-translate-x-full')) {
+            mobileMenu.classList.remove('-translate-x-full');
+            mobileMenu.classList.add('translate-x-0');
+        } else {
+            mobileMenu.classList.add('-translate-x-full');
+            mobileMenu.classList.remove('translate-x-0');
+        }
+    };
+
+    hamburgerIcon.addEventListener('click', toggleMenu);
+    closeMenu.addEventListener('click', toggleMenu);
+});
+</script>
+
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>{title}</title>
+		<meta property="title" content="Nest Inn Homestay | Homestay in tirupati">
+		<meta property="url" content="https://fourseasonshomestay.com/">
+		<meta property="site_name" content="Nest Inn Homestay">
+		<meta name="description" content="Experience a cozy stay at Nest Inn Homestay in tirupati, your perfect homestay in tirupati. Book now for a memorable stay close to Tirupati." />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="keywords" content="homestay in tirupati, homestays in tirupati, homestay, Nest Inn Homestay, fourseasonshomestay, Nest Inn HOME STAY, Best hotel in tirupati, Best homestay in tirupati, Top quality hotel, Car Rentals in Tirupati, Affordable Hotels in Tirupati, Cabs in Tirupati, Hotels in Tirupati, Places To Visit Near Tirupati, Hotels To Stay in Tirupati, Tourist Places in Tirupati, Budget Hotels in Tirupati, Famous Hotels in Tirupati, Best Places To Visit in Tirupati, Cheap Service Apartments, Tourist Places in Tirumala, Best Hotels in Tirupati, Places to Visit in Tirumala, Book Hotels in Tirpati, Hotels and Serviced Apartments, Hotels and Service Apartments in Tirupati, Hotel Amenities, Service Amenities, Service Apartments For Rent, Fully Furnished Apartments For Rent, Fully Furnished Apartments For Rent, Fully Furnished Apartments For Rent Near Me, Service Apartments in Tirupati, Furnished Apartment, Service Apartment, Furnished Apartments For Rent, Best Serviced Apartments, Cheap Apartments For Rent, Self Service Apartment, Apartments For Rent, Hotel Service Apartment, Hotel Service Apartment and Facilities, homestays near me, homestays in tirupati, homestay near me, best homestay in tirupati">
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap" rel="stylesheet">
+		<meta name="generator" content={Astro.generator} />
+		<script type="application/ld+json">
+			{
+			  "@context": "https://schema.org",
+			  "@type": "LodgingBusiness",
+			  "name": "Nest Inn Homestay",
+			  "address": {
+				"@type": "PostalAddress",
+				"streetAddress": "1-25/12, car showroom road, opposite to Tata motors, beside Mango Market Road, Kr Nagar, Srinivasapuram",
+				"addressLocality": "Tirupati",
+				"addressRegion": "Andhra Pradesh",
+				"postalCode": "517503",
+				"addressCountry": "India"
+			  },
+			  "telephone": "090003 74374",
+			  "url": "https://fourseasonshomestay.com",
+			  "description": "Experience a cozy stay at Nest Inn Homestay, a charming homestay in tirupati. Book homestay comfort and convenience close to tirupati.",
+			  "openingHours": "Mo-Su 00:00-24:00",
+			}
+			</script>
+			<link rel="sitemap" href="/sitemap-index.xml" />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+
+</style>

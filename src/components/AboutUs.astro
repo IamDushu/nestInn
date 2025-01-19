@@ -1,0 +1,47 @@
+---
+const imageNumbers = [1, 3, 4, 5, 8, 9, 10, 11, 12, 13, 20, 22];
+---
+
+<section class="px-10 lg:px-24 space-y-4 min-h-[100vh]">
+    <h1 class="text-4xl font-medium tracking-wide">ABOUT US</h1>
+    <p class="leading-2 tracking-wide text-sm lg:text-lg text-gray-500">
+        Discover the perfect stay at Nest Inn Homestay in tirupati! Our accommodation offers stylish 1bhk, 2bhk, and 3bhk room with a spacious hall, well-equipped kitchen, dining area, attached bathrooms, bedrooms, and a common balcony. Enjoy the comfort of fully furnished rooms with LED lighting, AC in bedrooms, sofa, dining table, and a fully equipped kitchen with stove.
+    </p>
+    <div class="space-y-4 pt-10">
+        <h2 class="text-3xl font-medium text-gray-800">Property Description</h2>
+        <p class="text-gray-600">
+            Spacious bedrooms with plush beds and ample storage<br />
+            1 bhk apartment<br />
+            2 bhk apartment<br />
+            3 bhk apartment<br />
+            Holiday rental apartment in Tirupati<br />
+            Best home stay in Tirupati<br />
+            Home stay in Tirupati<br />
+            Homes stays in Tirupati<br /><br />
+            - 1 modern bathroom with fresh towels and toiletries - A fully equipped kitchen with cooking essentials and dining area<br />
+            - Comfortable living room with TV and free Wi-Fi - Convenient location, close to public transport and local attractions<br />
+            <br />*Amenities:*<br />
+            - Laundry facilities<br />
+            - Free parking<br />
+            - Continental breakfast provided<br />
+            - Friendly hosts happy to share local tips and recommendations<br />
+            <br />*Perfect for:*<br />
+            - Solo travelers<br />
+            - Couples<br />
+            - Small families<br />
+            - Business travelers seeking a quiet retreat<br />
+            <br />Feel at home in our cozy and inviting space!<br />
+            <br />Fully furnished service apartment<br />
+        </p>
+    </div>
+    <div class="columns-1 lg:columns-4 gap-4 space-y-4 py-10">
+            {imageNumbers.map((number) => (
+            <div class="h-min w-full">
+                <img 
+                  src={`/images/${number}.jpeg`} 
+                  alt="homestay tirupati"
+                />
+             </div>
+              ))}
+    </div>
+</section>
