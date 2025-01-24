@@ -96,14 +96,6 @@ const imageNumbers = [1, 3, 4, 5, 2, 8, 9, 10, 11, 12, 13, 20, 16, 17, 22];
                 </p>
 			</div>
             <ImageGallery imageNumbers={imageNumbers} client:load />
-            {imageNumbers.map((number) => (
-            <div class="h-min w-full">
-                <img 
-                  src={`/images/${number}.jpeg`} 
-                  alt="homestay tirupati"
-                />
-             </div>
-              ))}
     </div>
 	</section>
 	<TalkComponent />
